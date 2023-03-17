@@ -1,0 +1,12 @@
+# Asks the question to the person, outputs Yes to three different answers, otherwise outputs No
+
+answer = input ("What is the Answer to the Great Question of Life, the Universe, and Everything? ")
+
+if answer == "42":
+    print ("Yes")
+elif answer == "forty-two":
+    print ("Yes")
+elif answer == "forty two":
+    print ("Yes")
+else :
+    print ("No")
