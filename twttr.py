@@ -1,14 +1,19 @@
-# Asks user to input something
-text = input("Input: ")
+def shorten(word):
+    """
+    Removes all vowels (A, E, I, O, and U) from the given word, whether inputted in uppercase or lowercase.
+    """
+    vowels = ["a", "e", "i", "o", "u"]
+    return "".join([letter for letter in word if letter.lower() not in vowels])
 
-# prints Output
-print("Output: ", end="")
 
-# creates letter variable which belongs to text, 
-# if letter contains vowels, it removes them and gives output without vowels, 
-# if letter don't contain vowels it prints same thing as input
-for letter in text:
-    
-    if not letter.lower() in ["a", "e", "i", "o", "u"]:    
-     print (letter, end="")
+def main():
+    """
+    Prompts the user to input a string and prints the shortened version of that string.
+    """
+    text = input("Input: ")
+    shortened_text = shorten(text)
+    print("Output:", shortened_text)
 
+
+if __name__ == "__main__":
+    main()
